@@ -119,3 +119,76 @@ console.log(users3)
 const users4 = users3.map(u => u.id === 1 ? {...u, address: {...u.address, city: "Sudan"}} : u)
 console.log(users4)
 const users5 = users4.map(u => u.id === 1 ? {...u, name: "Ali"} : u)
+
+//второе занятие
+
+let students = [
+    {
+        name: "Bob",
+        age: 22,
+        isMarried: true,
+        scores: 85,
+        // isStudent: true
+    },
+    {
+        name: "Alex",
+        age: 21,
+        isMarried: true,
+        scores: 89
+    },
+    {
+        name: "Nick",
+        age: 20,
+        isMarried: false,
+        scores: 120
+    },
+    {
+        name: "John",
+        age: 19,
+        isMarried: false,
+        scores: 100
+    }
+];
+
+const getNames = (arr) => {
+    const result = []
+    const getStudentName = (st) => st.name
+    for (let i = 0; i < arr.length; i++) {
+       result[i] = getStName(arr[i])
+    }
+    return result
+}
+
+const getScores = (arr) => {
+    const result = []
+    const getStScores = (st) => st.scores
+    for (let i = 0; i < arr.length; i++) {
+        result[i] = getStScores(arr[i])
+    }
+    return result
+}
+
+const getResult = (arr, fn) => {
+    const result = []
+    for (let i = 0; i < arr.length; i++) {
+        result[i] = getStScores(arr[i])
+    }
+    return result
+}
+
+console.log(getResult(students, getStName))
+console.log(students.map(getStName))
+console.log(getResult(students, getStScores))
+
+const selfMadeFilter = (arr, filterFn) => {
+    const result = []
+    for (let i = 0; i < arr.length; i++) {
+        if (filterFn(arr[i]) === true) {
+            result.push(arr[i])
+        }
+    }
+    return result
+}
+const func = (st) => st.scores >= 100
+console.log(students.filter(func))
+console.log(selfMadeFilter(students, func))
