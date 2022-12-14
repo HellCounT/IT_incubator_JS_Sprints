@@ -205,4 +205,24 @@ const selfMadeFind = (arr, func) => {
 
 console.log(students.find(findBob))
 console.log(selfMadeFind(students, findBob))
+
+//selfMadePop(arr) => arr.pop()
+
+const selfMadePop(arr) => {
+    let popElement = arr[arr.length - 1]
+    arr.length = arr.length - 1
+    return popElement
+}
+
+console.log(selfMadePop([...students]))
+console.log(students.pop())
+
+//selfIndexOf(arr, el) => arr.IndexOf(el)
+
+const selfMadeIndexOf(arr, el) = {
+    for (let i = 0; i < arr.length, i++) {
+        if (ell === arr[i]) return i
+    }
+}
+
     
