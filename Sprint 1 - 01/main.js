@@ -221,8 +221,10 @@ console.log(students.pop())
 
 const selfMadeIndexOf(arr, el) = {
     for (let i = 0; i < arr.length, i++) {
-        if (ell === arr[i]) return i
-    }
+        if (ell === arr[i]) return i else return -1
 }
+
+console.log(selfMadeIndexOf(students, students[2]))
+console.log(students.indexOf(students[2]))
 
     
