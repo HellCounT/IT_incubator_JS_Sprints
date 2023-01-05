@@ -91,7 +91,7 @@ for (let j = 0; j < nums.length - 1; j++) {
     let isSorted = true
     for (let i = 0; i < nums.length - 1 - j; i++) {
         if (nums[i] > nums[i + 1]) {
-            isSorted = false
+            isSorted = false;
                 // let temp = nums[i]
                 // nums[i] = nums[i+1]
                 // nums[i+1] = temp
